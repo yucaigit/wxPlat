@@ -1,0 +1,1 @@
+<view class="page1"><block wx:for="{{messageList}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view class="box"><view class="names">{{item.buyname}}</view><image class="img" src="../../static/tab_icons/my_active.png"></image><view class="box2"><view class="neiron"><input value="{{item.message}}"/></view></view></view></block><view class="myneiron">-------------</view></view>
