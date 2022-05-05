@@ -341,8 +341,11 @@ var _vuex = __webpack_require__(/*! vuex */ 14);function _interopRequireDefault(
     },
     removeOrder: function removeOrder(item) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var result;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   _this2.$request("/removeOrderById", { oId: item.orderId }));case 2:result = _context2.sent;
-                _this2.removeO(item);case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+                if (result) {
+                  _this2.getMyOrder(_this2.uid);
+                }case 4:case "end":return _context2.stop();}}}, _callee2);}))();
     },
+
     confimOrder: function confimOrder(item) {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var result;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
                   _this3.$request("/confirmResive", { oId: item.orderId }));case 2:result = _context3.sent;
                 _this3.confirmPay(item);case 4:case "end":return _context3.stop();}}}, _callee3);}))();

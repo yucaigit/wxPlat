@@ -170,6 +170,34 @@
           "name": "",
           "pathName": "pages/my/my",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpackage/test/test",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpackage/mymessage/mymessage",
+          "query": "id=7001",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpackage/mymessage/mymessage",
+          "query": "id=7001",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpackage/test/test",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

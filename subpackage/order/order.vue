@@ -33,9 +33,7 @@
 					</view>
 				</view>
 				<view class="card-button">
-          <view>删除</view>
           <view>查看物流</view>
-          <view>再次购买</view>
 				</view>
 			</view>
 		</view>
@@ -69,7 +67,7 @@
 					</view>
 				</view>
 				<view class="card-button">
-          <view>删除</view>
+          <view @click="removeOrder(item)">删除</view>
           <view>查看物流</view>
           <view>再次购买</view>
 				</view>
@@ -78,6 +76,7 @@
 	</view>
 </view>
 
+<!-- 待收货 -->
 <view class="order" v-if="current  == 2">
 	<view class="content_">
 		<view class="title">
@@ -97,7 +96,7 @@
 					</view>
 				</view>
 				<view class="card-button">
-          <view>删除</view>
+          <view @click="removeOrder(item)">删除</view>
           <view>查看物流</view>
           <view>再次购买</view>
 				</view>
@@ -109,6 +108,7 @@
 	</view>
 </view>
 
+<!-- 完成收获 -->
       <view class="order" v-if="current  == 3">
       	<view class="content_">
       		<view class="title">
@@ -128,7 +128,7 @@
       					</view>
       				</view>
       				<view class="card-button">
-                <view>删除</view>
+                <view @click="removeOrder(item)">删除</view>
                 <view>查看物流</view>
                 <view>再次购买</view>
       				</view>
@@ -186,8 +186,11 @@
       },
        async removeOrder(item){
         let result = await this.$request("/removeOrderById",{oId:item.orderId})
-        this.removeO(item)
+        if(result){
+			this.getMyOrder(this.uid)
+		}
        },
+	   
        async confimOrder(item){
          let result = await this.$request("/confirmResive",{oId:item.orderId})
          this.confirmPay(item)

@@ -24,23 +24,73 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.img {
-  height: 100rpx;
-  width: 100rpx;
-  border-radius: 2px;
+.page {
+  width: 100%;
+  height: 1000rpx;
 }
-.names {
-  font-size: 23rpx;
+.sousuoquyu {
+  background-color: #FFF;
+  display: flex;
+}
+.images {
+  height: 80rpx;
+  width: 80rpx;
+}
+.sousuo {
+  height: 80rpx;
+  width: 90%;
+  border-radius: 10rpx;
+  border: 2rpx solid #333333;
 }
 .box {
-  display: flex;
+  height: 100%;
+  width: 98%;
   margin: 10rpx;
+}
+.fasonquyu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.chat {
+  display: flex;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.chatneiron {
+  /* display: none; */
+  width: 250rpx;
+  font-size: 25rpx;
+  height: 50rpx;
+  background-color: #666666;
+  border: 1px solid #666666;
+  border-radius: 5px;
+}
+.chatneironr {
+  /* display: none; */
+  width: 250rpx;
+  font-size: 25rpx;
+  height: 50rpx;
+  background-color: #00CC66;
+  border: 1px solid #00CC66;
+  border-radius: 5px;
+}
+.img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.chatr {
+  display: flex;
+  margin-left: 60%;
+  margin-top: 10rpx;
+}
+.xianshiyonhu {
+  height: 100rpx;
   width: auto;
 }
-.box2 {
-  width: auto;
-  height: 100rpx;
-  border-radius: 10rpx;
-  background-color: #EAEAEA;
+.user {
+  display: flex;
 }
 
